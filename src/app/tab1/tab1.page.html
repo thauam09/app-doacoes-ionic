@@ -1,17 +1,36 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-title class="title">
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="content animate__animated animate__fadeInLeft">
+    <img
+      class="img-item"
+      src="../../assets/doacao-vetor.png"
+      alt="Imagem de Solidariedade"
+    />
+    <p>Existem pessoas precisando muito da sua ajuda!<br/>Veja abaixo como ajudar 😁​</p>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <ion-card [routerLink]="['/tabs/tab2']">
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <img src="../../assets/Quero Doar_.png" alt="Mão segurando um coração">
+        </ion-thumbnail>
+        <ion-label>Quero doar</ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card [routerLink]="['/tabs/tab3']">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="../../assets/Preciso de Doação.png" alt="Aperto de mãos">
+        </ion-thumbnail>
+        <ion-label>Preciso de doações</ion-label>
+      </ion-item>
+    </ion-card>
+  </div>
 </ion-content>
